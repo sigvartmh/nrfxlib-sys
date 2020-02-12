@@ -72,14 +72,13 @@ fn main() {
 		panic!("Failed to run bindgen: {:?}", status);
 	}
 
-	// Make sure we link against the libraries. We use the soft-float ABI.
 	println!(
 		"cargo:rustc-link-search={}",
 		Path::new(&nrfxlib_path)
 			.join("bsdlib")
 			.join("lib")
 			.join("cortex-m33")
-			.join("soft-float")
+			.join("hard-float")
 			.display()
 	);
 	println!(
@@ -89,7 +88,7 @@ fn main() {
 			.join("nrf_oberon")
 			.join("lib")
 			.join("cortex-m33")
-			.join("soft-float")
+			.join("hard-float")
 			.display()
 	);
 	println!(
@@ -99,7 +98,7 @@ fn main() {
 			.join("nrf_cc310_platform")
 			.join("lib")
 			.join("cortex-m33")
-			.join("soft-float")
+			.join("hard-float")
 			.display()
 	);
 	println!(
@@ -109,11 +108,11 @@ fn main() {
 			.join("nrf_cc310_mbedcrypto")
 			.join("lib")
 			.join("cortex-m33")
-			.join("soft-float")
+			.join("hard-float")
 			.display()
 	);
 	println!("cargo:rustc-link-lib=static=bsd_nrf9160_xxaa");
-	println!("cargo:rustc-link-lib=static=oberon_3.0.2");
-	println!("cargo:rustc-link-lib=static=nrf_cc310_platform_0.9.1");
-	println!("cargo:rustc-link-lib=static=nrf_cc310_mbedcrypto_0.9.1");
+	println!("cargo:rustc-link-lib=static=oberon_3.0.3");
+	println!("cargo:rustc-link-lib=static=nrf_cc310_platform_0.9.2");
+	println!("cargo:rustc-link-lib=static=nrf_cc310_mbedcrypto_0.9.2");
 }
