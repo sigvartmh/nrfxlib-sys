@@ -10,13 +10,8 @@
 #include "bsdlib/include/bsd_limits.h"
 #include "bsdlib/include/bsd_os.h"
 #include "bsdlib/include/bsd_platform.h"
-#include "bsdlib/include/nrf_apn_class.h"
 #include "bsdlib/include/nrf_errno.h"
-#include "bsdlib/include/nrf_inbuilt_key.h"
-#include "bsdlib/include/nrf_key_mgmt.h"
 #include "bsdlib/include/nrf_socket.h"
-#include "bsdlib/include/nrf_apn_class.h"
-#include "bsdlib/include/nrf_key_mgmt.h"
 
 /*
  * Crypto Cell 310 (CC310) platform headers
